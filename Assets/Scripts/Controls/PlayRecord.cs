@@ -22,7 +22,7 @@ public class PlayRecord : MonoBehaviour {
 	void Update () {
 		if (isRecording) {
 			timeCounter++;
-			Debug.Log ("We live baby");
+//			Debug.Log ("We live baby");
 		}
 	}
 }

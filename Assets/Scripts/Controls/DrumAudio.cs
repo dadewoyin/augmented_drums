@@ -22,7 +22,7 @@ public class DrumAudio : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-//		Debug.Log("Update");
+		//Debug.Log("Update");
 	}
 
 }
