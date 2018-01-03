@@ -11,7 +11,7 @@ public class PlayRecord : MonoBehaviour {
 	void Start () {
 		
 	}
-		
+
 	public void onStartRecording() {
 		timeCounter = 0f;
 		isRecording = true;
