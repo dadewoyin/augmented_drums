@@ -6,14 +6,14 @@ public class DrumAudio : MonoBehaviour {
 
 	AudioSource m_MyAudioSource;
 
-	struct DrumTime {
+	struct Drum {
 		public float DrumTime;
 		public object DrumSound;
 	}
 
 	void GetDrumTime(object drumSound) {
 
-		DrumTime drum;
+		Drum drum;
 		drum.DrumTime = FindObjectOfType<MetronomePro_Player> ().amount;
 		drum.DrumSound = drumSound;
 
