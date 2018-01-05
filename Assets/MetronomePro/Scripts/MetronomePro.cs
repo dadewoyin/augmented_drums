@@ -76,13 +76,13 @@ public class MetronomePro : MonoBehaviour {
 	// Set the new BPM when is playing
 	public void UpdateBPM () {
 		try {
-		var newBPMFloat = float.Parse (BPMInputField.text);
-		Bpm = (double)newBPMFloat;
+			var newBPMFloat = float.Parse (BPMInputField.text);
+			Bpm = (double)newBPMFloat;
 
-		txtBPM.text = "BPM: " + Bpm.ToString("F");
-		txtState.text = "";
+			txtBPM.text = "BPM: " + Bpm.ToString("F");
+			txtState.text = "";
 
-		SetDelay ();
+			SetDelay ();
 		} catch {
 			txtState.text = "Please enter the new BPM value correctly.";
 			Debug.Log ("Please enter the new BPM value correctly.");
@@ -92,13 +92,13 @@ public class MetronomePro : MonoBehaviour {
 	// Set the new Offset when is playing
 	public void UpdateOffset () {
 		try {
-		var newOffsetFloat = int.Parse (OffsetInputField.text);
-		OffsetMS = newOffsetFloat;
+			var newOffsetFloat = int.Parse (OffsetInputField.text);
+			OffsetMS = newOffsetFloat;
 
-		txtOffsetMS.text = "Offset: " + OffsetMS.ToString () + " MS";
-		txtState.text = "";
+			txtOffsetMS.text = "Offset: " + OffsetMS.ToString () + " MS";
+			txtState.text = "";
 
-		SetDelay ();
+			SetDelay ();
 		} catch {
 			txtState.text = "Please enter the new Offset value correctly.";
 			Debug.Log ("Please enter the new Offset value correctly.");
@@ -112,7 +112,6 @@ public class MetronomePro : MonoBehaviour {
 		if (songAudioSource.isPlaying) {
 			isPlaying = true;
 		}
-
 
 		songAudioSource.Pause ();
 
@@ -151,14 +150,14 @@ public class MetronomePro : MonoBehaviour {
 	// Calculate Time Intervals for the song
 	public void CalculateIntervals () {
 		try {
-		active = false;
-		var multiplier = Base / Step;
-		var tmpInterval = 60f / Bpm;
-		interval = tmpInterval / multiplier;
+			active = false;
+			var multiplier = Base / Step;
+			var tmpInterval = 60f / Bpm;
+			interval = tmpInterval / multiplier;
 
-		int i = 0;
+			int i = 0;
 
-		songTickTimes.Clear ();
+			songTickTimes.Clear ();
 
 			while (interval * i <= songAudioSource.clip.length) {
 				songTickTimes.Add ((interval * i) + (OffsetMS / 1000f));
@@ -243,6 +242,7 @@ public class MetronomePro : MonoBehaviour {
 
 		// Play Audio Tick
 		metronomeAudioSource.Play ();
+		// Debug.Log (CurrentTick);
 
 		// Change all colors in the UI to gray
 		imgBeat1.color = Color.gray;
@@ -265,11 +265,10 @@ public class MetronomePro : MonoBehaviour {
 		// YOUR FUNCTIONS HERE
 
 		// Example 1
-		/*
-		if (CurrentTick == 100) {
+		if (CurrentTick == 16) {
 			Debug.Log ("OMG! IS THE TICK NUMBER 100!");
+			Play ();
 		}
-		*/
 
 		// Example 2
 		// FindObjectOfType<MyAwesomeScript> ().MyFunction ();

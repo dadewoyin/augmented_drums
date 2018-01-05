@@ -40,7 +40,7 @@ public class MetronomePro_Player : MonoBehaviour {
 	public int Step = 4;
 	public int Base = 4;
 
-	float amount;
+	public float amount;
 
 	void Start () {
 
@@ -146,7 +146,7 @@ public class MetronomePro_Player : MonoBehaviour {
 
 	// Stop Song and Metronome, Resets all too.
 	public void StopSong () {
-		Debug.Log ("Song Stoped");
+		Debug.Log ("Song Stopped");
 		StopAllCoroutines ();
 		active = false;
 		playing = false;
@@ -194,6 +194,11 @@ public class MetronomePro_Player : MonoBehaviour {
 					amount = (songAudioSource.time) / (songAudioSource.clip.length);
 					songPlayerBar.fillAmount = amount;
 					actualPosition.text = UtilityMethods.FromSecondsToMinutesAndSeconds (songAudioSource.time);
+					// Debug.Log(amount);
+					// if (amount > 0.5) {
+					// 	playing = false;
+					// 	PlayOrPauseSong();
+					// }
 				} else {
 					StopSong ();
 				}

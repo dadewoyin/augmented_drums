@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayRecord : MonoBehaviour {
 
-	private bool isRecording;
-	private float timeCounter;
+	// private bool isRecording;
+	// private float timeCounter;
 
 	// Use this for initialization
 	void Start () {
@@ -13,16 +13,16 @@ public class PlayRecord : MonoBehaviour {
 	}
 
 	public void onStartRecording() {
-		timeCounter = 0f;
-		isRecording = true;
-		Debug.Log ("Play button");
+		// timeCounter = 0f;
+		// isRecording = true;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (isRecording) {
-			timeCounter++;
-//			Debug.Log ("We live baby");
-		}
+// 		if (isRecording) {
+// //			timeCounter++;
+// //			Debug.Log ("We live baby");
+// 		}
 	}
 }
