@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Drum_kit_for_your_band/Drum_kit_for_your_band_demo_scene.unity
+    guid: 4f00103a58490b74185d7cfbfddd8186

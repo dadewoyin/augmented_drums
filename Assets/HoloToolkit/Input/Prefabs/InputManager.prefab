@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114000013868099214}
   - component: {fileID: 114708646396671696}
   - component: {fileID: 114742747811649402}
+  - component: {fileID: 114050410288531134}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -258,6 +259,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
@@ -336,6 +338,17 @@ MonoBehaviour:
   UseGazeManager: 1
   DefaultPlaneDistance: 2
   DrawGizmos: 0
+--- !u!114 &114050410288531134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011070707148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b160d197a8ca1894796ae263bafec0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114345042324023316
 MonoBehaviour:
   m_ObjectHideFlags: 1
