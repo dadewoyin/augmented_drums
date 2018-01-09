@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HoloToolkit.Unity.InputModule;
 
-public class DrumAudio : MonoBehaviour {
+public class DrumAudio : MonoBehaviour, IInputClickHandler {
 
 	AudioSource m_MyAudioSource;
 
@@ -32,7 +33,7 @@ public class DrumAudio : MonoBehaviour {
 
 	}
 
-	void OnMouseDown() {
+	public void OnInputClicked(InputClickedEventData eventData) {
 		Debug.Log ("Testing");
 		m_MyAudioSource.Play ();
 		Debug.Log (m_MyAudioSource);
